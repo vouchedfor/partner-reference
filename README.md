@@ -5,6 +5,8 @@ Partner reference site, with simple demos
   * [Pre-requisites] (#pre-requisites)
   * [How it works] (#how-it-works)
 * [Code Example](#code-example) 
+  * [2. Construct the url] (#2.-construct-the-url)
+  * [3. Put it all together] (#3.-put-it-all-together)
 
 ## VouchedFor Search on Partner sites
 This guide shows how to incorporate a VouchedFor search box into a partner site . The advantages of this method are: 
@@ -67,7 +69,7 @@ Example output is `https://www.vouchedfor.co.uk/financial-advisor-ifa/w4%203bu?u
 
 ### 3. Put it all together
 
-Overide the form, select the input field, then update the windoe location with the constucted URL.
+Overide the form, select the input field, then update the window location with the constucted URL.
 
 ```javascript
 $(document).ready(function($){ 
