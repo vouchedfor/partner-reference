@@ -28,4 +28,53 @@ Based on the URL, the site will run a search for the location (and apply optiona
 
 ## Code Example
 
-If you want to jump straight into the example, go to [searchbox.html](../master/searchbox.html)
+If you want to jump straight into the example, go to [searchbox.html](../master/searchbox.html). The code example uses jQuery to override `onsubmit` and update the browsers location.
+
+### 1. Setup a form
+
+```html
+<form>
+  <h3>Search for a financial adviser near you</h3>
+		<input type="text" name="town_postcode" value placeholder="Town / Postcode" />
+  <button>Search VouchedFor</button>
+</form>
+```
+
+### 2. Construct the url
+
+```javascript
+var source = 'partner-website-name';
+var medium = 'referral';
+var campaign = 'search_financial_adviser';
+
+var vertical = 'financial-advisor-ifa';
+
+function constuct_search_url(search_query) {
+
+    return 'https://www.vouchedfor.co.uk/' + 
+            vertical + '/' +
+			         encodeURIComponent(search_query) +
+			         '?' + 
+			         'utm_source=' + source + '&' +
+			         'utm_medium=' + medium + '&' +
+			         'utm_campaign=' + campaign;
+}
+```
+ 
+Note: this function encodes the search query as a URI to handle spaces in the user input.
+
+example output is `https://www.vouchedfor.co.uk/financial-advisor-ifa/w4%203bu?utm_source=partner-website-name&utm_medium=referral&utm_campaign=search_financial_adviser`
+
+### 3. Put it all together
+
+```javascript
+$(document).ready(function($){ 
+  $('form').on('submit', function(e){
+      
+      var input = $( 'form' ).find( 'input[name="town_postcode"]' );
+      window.location.href = ( constuct_search_url( input.val() ) );
+      return false;
+  });
+});
+```
+
