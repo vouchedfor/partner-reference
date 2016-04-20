@@ -5,6 +5,7 @@ Partner reference site, with simple demos
   * [Pre-requisites] (#pre-requisites)
   * [How it works] (#how-it-works)
 * [Code Example](#code-example) 
+  * [1. Setup a form] (#1.-setup-a-form)
   * [2. Construct the url] (#2.-construct-the-url)
   * [3. Put it all together] (#3.-put-it-all-together)
 
