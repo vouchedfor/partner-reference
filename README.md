@@ -28,4 +28,4 @@ Based on the URL, the site will run a search for the location (and apply optiona
 
 ## Code Example
 
-If you want to jump straight into the example, go to [searchbox.html](../blob/master/searchbox.html)
+If you want to jump straight into the example, go to [searchbox.html](../master/searchbox.html)
