@@ -53,24 +53,25 @@ function constuct_search_url(search_query) {
 
     return 'https://www.vouchedfor.co.uk/' + 
             vertical + '/' +
-			         encodeURIComponent(search_query) +
-			         '?' + 
-			         'utm_source=' + source + '&' +
-			         'utm_medium=' + medium + '&' +
-			         'utm_campaign=' + campaign;
+            encodeURIComponent(search_query) +
+            '?' + 
+            'utm_source=' + source + '&' +
+	    'utm_medium=' + medium + '&' +
+	    'utm_campaign=' + campaign;
 }
 ```
  
 Note: this function encodes the search query as a URI to handle spaces in the user input.
 
-example output is `https://www.vouchedfor.co.uk/financial-advisor-ifa/w4%203bu?utm_source=partner-website-name&utm_medium=referral&utm_campaign=search_financial_adviser`
+Example output is `https://www.vouchedfor.co.uk/financial-advisor-ifa/w4%203bu?utm_source=partner-website-name&utm_medium=referral&utm_campaign=search_financial_adviser`
 
 ### 3. Put it all together
 
+Overide the form, select the input field, then update the windoe location with the constucted URL.
+
 ```javascript
 $(document).ready(function($){ 
-  $('form').on('submit', function(e){
-      
+  $('form').on('submit', function(e) {
       var input = $( 'form' ).find( 'input[name="town_postcode"]' );
       window.location.href = ( constuct_search_url( input.val() ) );
       return false;
