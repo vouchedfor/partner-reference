@@ -1,0 +1,100 @@
+<html>
+<head>
+	<title>Url based search box example</title>
+
+	<style type="text/css">
+
+		input, button, h3, p {
+			font-family: Arial;
+		}
+
+		h3 {
+			font-size: 30px;
+		}
+
+		div.content {
+			margin: 20px;
+		}
+
+		div.search-box {
+			text-align: center;
+		}
+
+		input {
+			height: 40px;
+			width: 200px;
+			padding-left: 10px;
+			font-size: 20px;
+			float: left;
+		}
+
+		button {
+			height: 40px;
+			width: 200px;
+			float: left;
+			font-size: 20px;
+			background-color: green;
+			color: white;
+		}
+	</style>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js">
+	</script>
+
+	<script>
+	var source = 'partner-website-name';
+	var medium = 'referral';
+	var campaign = 'search_financial_adviser';
+
+	var vertical = 'financial-advisor-ifa';
+
+	function constuct_search_url(search_query) {
+
+		return 'https://www.vouchedfor.co.uk/' +
+			   vertical + '/' +
+			   encodeURIComponent(search_query) +
+			   '?' + 
+			   'utm_source=' + source + '&' +
+			   'utm_medium=' + medium + '&' +
+			   'utm_campaign=' + campaign;
+
+	}
+
+	$(document).ready(function($){ 
+	
+   		$('form').on('submit', function(e){
+     		
+     		var input = $( 'form' ).find( 'input[name="town_postcode"]' );
+     		
+     		console.log(constuct_search_url(input.val()));
+
+     		window.location.href = ( constuct_search_url( input.val() ) );
+
+     		return false;
+		});
+
+	});
+	</script>
+
+</head>
+<body>
+
+
+
+
+	<div class="content">
+
+		<form>
+
+			<h3>Search for a financial adviser near you</h3>
+
+			<div class="search-box">
+				<input type="text" name="town_postcode" value placeholder="Town / Postcode" />
+				<button>Search VouchedFor</button>
+			</div>
+
+		</form>
+
+	</div>
+
+</body>
