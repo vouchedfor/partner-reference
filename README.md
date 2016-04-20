@@ -27,3 +27,5 @@ The partner adds a location search box (and optionally other filters) and a subm
 Based on the URL, the site will run a search for the location (and apply optional filters) and show the standard search results.
 
 ## Code Example
+
+If you want to jump straight into the example, go to [searchbox.html](../master/searchbox.html)
