@@ -51,8 +51,6 @@
    		$('form').on('submit', function(e){
      		
      		var input = $( 'form' ).find( 'input[name="town_postcode"]' );
-     		
-     		console.log(constuct_search_url(input.val()));
 
      		window.location.href = ( constuct_search_url( input.val() ) );
 
