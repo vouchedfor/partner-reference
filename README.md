@@ -2,7 +2,9 @@
 Partner reference site, with simple demos
 
 * [VouchedFor Search on Partner sites](#vouchedfor-search-on-partner-sites)
-* 
+  * [Pre-requisites] (#pre-requisites)
+  * [How it works] (#how-it-works)
+* [Code Example](#code-example) 
 
 ## VouchedFor Search on Partner sites
 This guide shows how to incorporate a VouchedFor search box into a partner site . The advantages of this method are: 
@@ -23,3 +25,5 @@ Before getting started, you need to get the following tracking information from 
 The partner adds a location search box (and optionally other filters) and a submit button. When the user presses submit the partner site generates a VouchedFor Search Results URL and instructs the browser to go to that URL, typically within the same browser window. 
 
 Based on the URL, the site will run a search for the location (and apply optional filters) and show the standard search results.
+
+## Code Example
