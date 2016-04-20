@@ -5,9 +5,9 @@ Partner reference site, with simple demos
   * [Pre-requisites] (#pre-requisites)
   * [How it works] (#how-it-works)
 * [Code Example](#code-example) 
-  * [1. Setup a form] (#1.-setup-a-form)
-  * [2. Construct the url] (#2.-construct-the-url)
-  * [3. Put it all together] (#3.-put-it-all-together)
+  * [1. Setup a form] (#setup-a-form)
+  * [2. Construct the url] (#construct-the-url)
+  * [3. Put it all together] (#put-it-all-together)
 
 ## VouchedFor Search on Partner sites
 This guide shows how to incorporate a VouchedFor search box into a partner site . The advantages of this method are: 
@@ -33,7 +33,7 @@ Based on the URL, the site will run a search for the location (and apply optiona
 
 If you want to jump straight into the example, go to [searchbox.html](../master/searchbox.html). The code example uses jQuery to override `onsubmit` and update the browsers location.
 
-### 1. Setup a form
+### Setup a form
 
 ```html
 <form>
@@ -43,7 +43,7 @@ If you want to jump straight into the example, go to [searchbox.html](../master/
 </form>
 ```
 
-### 2. Construct the url
+### Construct the url
 
 ```javascript
 var source = 'partner-website-name';
@@ -68,7 +68,7 @@ Note: this function encodes the search query as a URI to handle spaces in the us
 
 Example output is `https://www.vouchedfor.co.uk/financial-advisor-ifa/w4%203bu?utm_source=partner-website-name&utm_medium=referral&utm_campaign=search_financial_adviser`
 
-### 3. Put it all together
+### Put it all together
 
 Overide the form, select the input field, then update the window location with the constucted URL.
 
