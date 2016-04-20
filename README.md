@@ -1,12 +1,15 @@
 # partner-reference
 Partner reference site, with simple demos
 
+* [VouchedFor Search on Partner sites](#vouchedfor-search-on-partner-sites)
+* 
+
 ## VouchedFor Search on Partner sites
 This guide shows how to incorporate a VouchedFor search box into a partner site . The advantages of this method are: 
+* the partner retains control of the look and feel, 
+* any enquiries to advisors are associated with the partner, and 
+* it’s simple and inexpensive to implement.
 
-the partner retains control of the look and feel, 
-any enquiries to advisors are associated with the partner, and 
-it’s simple and inexpensive to implement.
 ### Pre-requisites
 Before getting started, you need to get the following tracking information from the VouchedFor partners team.
 
